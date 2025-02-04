@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">MyPortfolio</a>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-item active">Home</a></li>
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#portfolio" class="nav-item">Portfolio</a></li>
+          <li><a href="#contact" class="nav-item">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Hi, I'm Rudra Prajapati</h1>
+      <p>Creative Developer & Designer</p>
+      <a href="#portfolio" class="btn btn-primary">See My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container about-container">
+      <div class="about-img">
+        <img src="assets/images/about.jpg" alt="About Me" />
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I'm a creative developer and designer with a passion for building elegant and efficient web experiences.
+          With years of experience in front‑end development, I love combining code and creativity to bring ideas to life.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>My Work</h2>
+      <!-- Filter Buttons -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="app">Mobile Apps</button>
+        <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+      </div>
+      <!-- Portfolio Items -->
+      <div class="portfolio-items">
+        <div class="portfolio-item" data-category="web">
+          <img src="assets/images/portfolio1.png" alt="Project 1" />
+          <div class="portfolio-info">
+            <h3>TechSoft</h3>
+            <p>Web Design</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="app">
+          <img src="assets/images/portfolio2.png" alt="Project 2" />
+          <div class="portfolio-info">
+            <h3>TrackMyLogs</h3>
+            <p>Desktop App</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="graphic">
+          <img src="assets/images/portfolio3.png" alt="Project 3" />
+          <div class="portfolio-info">
+            <h3>Event Certify</h3>
+            <p>GDG On Campus BVM</p>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="web">
+          <img src="assets/images/portfolio4.png" alt="Project 4" />
+          <div class="portfolio-info">
+            <h3>Solidify</h3>
+            <p>Hardware Project</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Name <span>*</span></label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+          <small class="error-message"></small>
+        </div>
+        <div class="form-group">
+          <label for="email">Email <span>*</span></label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required />
+          <small class="error-message"></small>
+        </div>
+        <div class="form-group">
+          <label for="message">Message <span>*</span></label>
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          <small class="error-message"></small>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="formSuccess" class="form-success"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Scroll-to-Top Button -->
+  <button id="scrollToTop" class="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
